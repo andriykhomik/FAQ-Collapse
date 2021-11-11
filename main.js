@@ -1,12 +1,15 @@
-const faqs = document.querySelectorAll('.faq');
+// const faqs = document.querySelectorAll('.faq');
+//
+// faqs.forEach((faq)=> {
+//     faq.querySelector('button').addEventListener('click', ()=>{
+//             faq.classList.toggle('active');
+//     })
+// })
 
-faqs.forEach((faq)=> {
-    faq.querySelector('button').addEventListener('click', ()=>{
-        if (faq.classList.value.includes('active')){
-            faq.classList.remove('active');
-        } else {
-            faq.classList.add('active');
-        }
+const toggles = document.querySelectorAll('.faq-toggle');
+
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', ()=> {
+        toggle.parentNode.classList.toggle('active');
     })
 })
-
